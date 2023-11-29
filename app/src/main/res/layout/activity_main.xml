@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/textNombre"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:text="Nombre:"
+
+
+        />
+
+    <TextView
+        android:id="@+id/textEdad"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/textNombre"
+        app:layout_constraintStart_toStartOf="parent"
+        android:text="Edad:"
+        />
+
+    <TextView
+        android:id="@+id/textNacimiento"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/textEdad"
+        app:layout_constraintStart_toStartOf="parent"
+       android:gravity="center"
+        android:text="Nacido en: "
+
+        />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/textNacimiento"
+        app:layout_constraintStart_toStartOf="parent"
+        android:gravity="center"
+        android:layout_margin="10dp"
+        >
+    <Button
+        android:id="@+id/botonAnterior"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/textNacimiento"
+        app:layout_constraintStart_toStartOf="parent"
+        android:text="Anterior"
+        android:layout_weight="1"
+        android:layout_margin="5dp"
+        app:cornerRadius="0dp"
+        android:onClick="Anterior"
+        />
+
+    <Button
+        android:id="@+id/botonSiguiente"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dp"
+        android:layout_weight="1"
+        android:backgroundTint="@color/gris"
+        android:text="Siguiente"
+        android:textColor="@color/black"
+        app:cornerRadius="0dp"
+        app:layout_constraintStart_toEndOf="@id/botonAnterior"
+        app:layout_constraintTop_toBottomOf="@id/textNacimiento"
+        android:onClick="Siguiente"
+        />
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
